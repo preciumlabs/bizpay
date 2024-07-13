@@ -1,0 +1,261 @@
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.body {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  // background-color: rgb(0, 0, 0);
+  background: -webkit-linear-gradient(-45deg, #FC466B 20%, #3F5EFB 100%);
+  background: linear-gradient(135deg, #FC466B 20%, #3F5EFB 100%);
+  padding-bottom: 50px;
+}
+
+.bodyText {
+  color: white;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.subtitle {
+  color: white;
+}
+
+.main {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  background: transparent;
+  // background-color: rgb(0, 0, 0);
+}
+
+.textContainer {
+  // display: flex;
+  text-align: center;
+}
+
+.mainLeft {
+  flex: 1;
+}
+
+.bodyText {
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.bodyContent {
+  width: 70%;
+}
+
+.categorySection {
+  padding: 1rem 0;
+  margin: auto;
+
+  .categoryContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 1.25rem;
+    justify-content: space-between;
+    align-items: stretch;
+    justify-items: stretch;
+
+    .categoryCard {
+      padding: 0.5rem;
+      padding-bottom: 0;
+      cursor: pointer;
+
+      .cardBlock {
+        padding: 2rem;
+
+        .cardImage {
+          font-size: 2.5rem;
+        }
+
+        .cardLabel {
+          font-weight: bold;
+        }
+
+        .cardDescription {}
+
+      }
+
+      .bottomBorder {
+        margin-top: 0.5rem;
+        height: 0.25rem;
+      }
+
+      &:hover {
+        .cardBlock {
+          .cardImage {
+            color: #FFB038;
+          }
+        }
+
+        .bottomBorder {
+          background-color: #FFB038;
+        }
+      }
+    }
+  }
+
+  .categorySectionFormControl {
+    margin: 1rem 0;
+    width: 100%;
+
+    .selectBox {
+      padding: 1rem;
+      box-sizing: border-box;
+      border-radius: 0.25rem;
+      outline: none !important;
+      background-color: #FFF !important;
+      border: 1px solid #EAEAF1;
+      color: #3D3D3D !important;
+      font-size: 16px !important;
+    }
+  }
+}
+
+.businessDetailsForm{
+  padding: 1rem 0;
+  margin: auto;
+
+  .formRow{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+
+    .selectionFormControl {
+      margin: 1rem 0;
+      width: 100%;
+  
+      .formLabel{
+        color: white;
+        padding-bottom: 0.5rem;
+        text-align: left;
+
+        &+.selectBox{
+          margin-top: 0;
+        }
+      }
+
+      .textField{
+        padding: 1rem;
+        border: 1px solid darkgray;
+        border-radius: 0.25rem;
+      }
+
+      .selectBox {
+        padding: 1rem;
+        box-sizing: border-box;
+        border-radius: 0.25rem;
+        outline: none !important;
+        background-color: #FFF !important;
+        border: 1px solid #EAEAF1;
+        color: #3D3D3D !important;
+        font-size: 16px !important;
+      }
+
+      .formRowSelects{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        width:100%;
+
+        .selectBox{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.actionFooter {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: white;
+    cursor: pointer;
+  }
+
+  .continueButton{
+    min-width: 141px;
+    padding: 1rem;
+    box-sizing: content-box;
+    border: none;
+    background: #007BFF;
+    color: white;
+    border-radius: 0.25rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background: #004BD9;
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+
+      &:hover {
+        background: #005bff;
+      }
+    }
+  }
+
+  &.max600 {
+    max-width: 600px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .main {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+
+  .mainLeft {
+    margin-top: 32px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .bodyText {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+}
