@@ -1,1 +1,2 @@
-# bizpay
+# bizflip-client
+# frontend
